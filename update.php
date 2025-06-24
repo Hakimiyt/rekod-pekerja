@@ -86,14 +86,14 @@ if (isset($_POST["update"])) {
             if (isset($_GET['id'])) {
                 include("conn.php");
 
-                // Dapatkan ID dari URL
+              
                 $id = $_GET['id'];
 
-                // Betulkan query
+             
                 $sql = "SELECT * FROM datapekerja WHERE id=$id";
                 $result = mysqli_query($conn, $sql);
 
-                // Semak jika rekod wujud
+            
                 if ($result && mysqli_num_rows($result) > 0) {
                     $row = mysqli_fetch_array($result);
                     ?>  
